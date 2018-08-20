@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  pgpool:
+    image: rueian/pgpool:3.7.4-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgpool.conf:/etc/pgpool.conf
+  pg0:
+    image: postgres:10-alpine
